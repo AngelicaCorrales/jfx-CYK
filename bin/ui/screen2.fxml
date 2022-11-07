@@ -36,7 +36,7 @@
                   <Insets bottom="30.0" />
                </VBox.margin>
             </Label>
-            <Label text="Ingrese los valores correspondientes para la gramática en FNC" textFill="WHITE">
+            <Label text="Ingrese los valores correspondientes para la gramatica en FNC" textFill="WHITE">
                <font>
                   <Font name="Rockwell Bold" size="25.0" />
                </font>
