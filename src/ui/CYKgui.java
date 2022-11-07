@@ -80,6 +80,8 @@ public class CYKgui {
 			mainPane.getChildren().clear();
 			mainPane.setCenter(menuPane);
 			mainPane.setStyle("-fx-background-image: url(/ui/background.jpeg)");
+			
+			initializeTableViewGrammar();
 		}else {
 			Alert alert = new Alert(AlertType.ERROR);
 			alert.setTitle("Error");
@@ -119,7 +121,7 @@ public class CYKgui {
     }
     
     public void initializeRowsTableViewGrammar() {
-
+    	grammarRows= new ArrayList<GrammarTVRow>();
 		for(int i=0; i<control.getNumVariables();i++) {
 			GrammarTVRow row=new GrammarTVRow();			
 			grammarRows.add(row);		
