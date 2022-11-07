@@ -18,6 +18,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.control.Label;
 import model.ControllerCYK;
 
 public class CYKgui {
@@ -32,7 +33,7 @@ public class CYKgui {
 
 	@FXML
 	private Spinner<Integer> variablesSpinner;
-	
+
 	@FXML
     private TableColumn<GrammarTVRow, Character> colArrow;
 
@@ -44,6 +45,13 @@ public class CYKgui {
 
     @FXML
     private TableView<GrammarTVRow> tvGrammar;
+    
+    @FXML
+	private Label message;
+
+	@FXML
+	private TableView<?> tvResults;
+
 
 
 	public CYKgui(ControllerCYK c) {
@@ -60,7 +68,7 @@ public class CYKgui {
 		SpinnerValueFactory<Integer> valueFactory= new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 26, 1);
 		variablesSpinner.setValueFactory(valueFactory);
 	}
-	
+
 	@FXML
 	public void continueToScreen2(ActionEvent event) throws IOException {
 		if(!stringW.getText().equals("")) {
@@ -81,7 +89,11 @@ public class CYKgui {
 		}
 	}
 	
-	
+	@FXML
+	public void startAgain(ActionEvent event) throws IOException {
+		showWelcomeWindow();
+	}	
+
     @FXML
     void getResult(ActionEvent event) throws IOException {
     	if(valuesMissingGrammar()) {
@@ -157,4 +169,5 @@ public class CYKgui {
     }
     
     
+
 }
