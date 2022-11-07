@@ -3,6 +3,7 @@ package ui;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -19,6 +20,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.control.Label;
+import model.CYKRow;
 import model.ControllerCYK;
 
 public class CYKgui {
@@ -50,7 +52,7 @@ public class CYKgui {
 	private Label message;
 
 	@FXML
-	private TableView<?> tvResults;
+	private TableView<CYKRow> tvResults;
 
 
 
@@ -114,7 +116,7 @@ public class CYKgui {
 			mainPane.setCenter(menuPane);
 			mainPane.setStyle("-fx-background-image: url(/ui/background.jpeg)");
 			
-			//resultado en LABEL
+			//FALTA RESULATDO EN LABEL----------------------------------
 			initializeTableViewCYK();
 		}
 
@@ -166,10 +168,29 @@ public class CYKgui {
     	}
     }
     
-    public void initializeTableViewCYK() {
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	public void initializeTableViewCYK() {
+    	control.createCYKRows();
+    	addColumnsCYK();
+    	
+    	ObservableList<CYKRow> observableList= FXCollections.observableArrayList(control.getCykRows());
+    	tvResults.setItems(observableList);
+    	
+    	int j=0;
+    	
+    	for(int i=0; i<tvResults.getColumns().size();i++) {
+			final int  num=j;
+			tvResults.getColumns().get(i).setCellValueFactory(cellData -> new SimpleObjectProperty((cellData.getValue().getVariables().get(num))));			
+			j++;
+		}
     	
     }
     
-    
+    public void addColumnsCYK() {	
+
+    	for(int i=0; i<control.getCykRows().size();i++) {
+    		tvResults.getColumns().add(new TableColumn<CYKRow, String>("j="+(i+1)));
+    	}
+    }
 
 }
