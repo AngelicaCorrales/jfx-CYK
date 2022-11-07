@@ -5,6 +5,11 @@ import java.util.Hashtable;
 
 public class Grammar {
 
-	Hashtable<String,ArrayList<String>> grammar;
+	private Hashtable<String,ArrayList<String>> grammar;
+
+	public Hashtable<String,ArrayList<String>> getGrammar() {
+		return grammar;
+	}
+	
 	
 }
