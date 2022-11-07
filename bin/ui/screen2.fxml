@@ -14,7 +14,7 @@
       <TableView fx:id="tvGrammar" prefHeight="200.0" prefWidth="200.0" style="-fx-font-family: Rockwell; -fx-font-size: 20;" BorderPane.alignment="CENTER">
         <columns>
           <TableColumn fx:id="colVariable" prefWidth="75.0" text="Variable" />
-            <TableColumn fx:id="colArrow" prefWidth="75.0" text="-&gt;" />
+            <TableColumn fx:id="colArrow" prefWidth="75.0" text="→" />
             <TableColumn fx:id="colProductions" prefWidth="75.0" text="Producciones" />
         </columns>
          <BorderPane.margin>
@@ -28,7 +28,7 @@
    <top>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="lbNameMachine" text="Algoritmo CYK" textFill="WHITE">
+            <Label text="Algoritmo CYK" textFill="WHITE">
                <font>
                   <Font name="Rockwell" size="40.0" />
                </font>

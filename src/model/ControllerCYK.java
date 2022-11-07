@@ -1,28 +1,49 @@
 package model;
 
-import java.util.ArrayList;
 
 public class ControllerCYK {
 
-	Grammar grammar;
-	ArrayList<String>[][] cykMatrix;
-	String stringW;
+	private Grammar grammar;
+	private String[][] cykMatrix;
+	private String stringW;
+	
+	private int numVariables;
 	
 	public ControllerCYK(String string, int integer) {
 		grammar=new Grammar();
+		stringW=string;
+		
+		numVariables=integer;
 		
 	}
 	
 	public void initializeMatrix() {
 		int sl= stringW.length();
-		//cykMatrix= new ArrayList<String>[sl][sl];
+		cykMatrix= new String[sl][sl];
+		
 		
 		
 	}
 	
+	public void setGrammarInitilVariable(String var) {
+		grammar.setInitialVariable(var);
+	}
+	public void addToGrammar(String variable, String productions) {
+		grammar.addToGrammar(variable, productions);
+	}
+	
 	
 	public void cykAlgorithm() {
+		initializeMatrix();
 		
+		/*
+		 * 
+		 */
+		
+	}
+
+	public int getNumVariables() {
+		return numVariables;
 	}
 }
 

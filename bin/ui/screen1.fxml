@@ -40,11 +40,11 @@
                   <Font name="Rockwell" size="25.0" />
                </font>
             </Label>
-            <Spinner fx:id="statesSpinner" prefHeight="25.0" prefWidth="189.0" GridPane.columnIndex="1">
+            <Spinner fx:id="variablesSpinner" prefHeight="25.0" prefWidth="189.0" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets left="30.0" />
                </GridPane.margin></Spinner>
-            <TextField fx:id="inputSymbols" prefHeight="25.0" prefWidth="221.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TextField fx:id="stringW" prefHeight="25.0" prefWidth="221.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets right="100.0" />
                </GridPane.margin>

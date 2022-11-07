@@ -14,7 +14,7 @@
       <TableView fx:id="tvGrammar" prefHeight="200.0" prefWidth="200.0" style="-fx-font-family: Rockwell; -fx-font-size: 20;" BorderPane.alignment="CENTER">
         <columns>
           <TableColumn fx:id="colVariable" prefWidth="75.0" text="Variable" />
-            <TableColumn fx:id="colArrow" prefWidth="75.0" text="-&gt;" />
+            <TableColumn fx:id="colArrow" prefWidth="75.0" text="→" />
             <TableColumn fx:id="colProductions" prefWidth="75.0" text="Producciones" />
         </columns>
          <BorderPane.margin>
@@ -36,7 +36,7 @@
                   <Insets bottom="30.0" />
                </VBox.margin>
             </Label>
-            <Label text="Ingrese los valores correspondientes para la gramática en FNC" textFill="WHITE">
+            <Label text="Ingrese los valores correspondientes para la gramatica en FNC" textFill="WHITE">
                <font>
                   <Font name="Rockwell Bold" size="25.0" />
                </font>
