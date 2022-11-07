@@ -8,6 +8,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import model.ControllerCYK;
@@ -23,6 +25,19 @@ public class CYKgui {
 
 	@FXML
 	private Spinner<Integer> statesSpinner;
+	
+	@FXML
+    private TableColumn<?, ?> colArrow;
+
+    @FXML
+    private TableColumn<?, ?> colProductions;
+
+    @FXML
+    private TableColumn<?, ?> colVariable;
+
+    @FXML
+    private TableView<?> tvGrammar;
+
 
 	public CYKgui(ControllerCYK c) {
 		control=c;
@@ -43,4 +58,10 @@ public class CYKgui {
 	void continueToScreen2(ActionEvent event) {
 
 	}
+	
+	
+    @FXML
+    void getResult(ActionEvent event) {
+
+    }
 }
