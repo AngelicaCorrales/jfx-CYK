@@ -24,7 +24,7 @@
           <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label prefHeight="94.0" prefWidth="245.0" text="Número de variables de la gramática:" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+            <Label prefHeight="94.0" prefWidth="245.0" text="Numero de variables de la gramatica:" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <GridPane.margin>
                   <Insets left="70.0" />
                </GridPane.margin>
@@ -76,7 +76,7 @@
                   <Insets top="80.0" />
                </VBox.margin>
             </Label>
-            <Label text="¡Descubre si una cadena pertenece a una gramática!" textAlignment="CENTER" textFill="WHITE">
+            <Label text="¡Descubre si una cadena pertenece a una gramatica!" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Rockwell Bold" size="25.0" />
                </font>

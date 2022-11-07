@@ -74,13 +74,17 @@ public class ControllerCYK {
 						for(int m=0;m<cykMatrix[i+k+1][j-k-1].length();m++) {
 							aux1=cykMatrix[i][k].charAt(l)+""+cykMatrix[i+k+1][j-k-1].charAt(m);
 							aux2=grammar.SearchInGrammar(aux1);
-							if(!cykMatrix[i][j].contains(aux2)) {
-								cykMatrix[i][j]+=aux2;
+							for(int n=0;n<aux2.length();n++) {
+								if(!cykMatrix[i][j].contains(aux2.charAt(n)+"")) {
+									cykMatrix[i][j]+=aux2.charAt(n);
+								}
 							}
 						}
 					}
 				}
-				
+				if(cykMatrix[i][j].isEmpty()) {
+					cykMatrix[i][j]="{ }";
+				}
 			}
 		}
 	}

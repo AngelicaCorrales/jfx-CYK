@@ -24,7 +24,9 @@ import model.CYKRow;
 import model.ControllerCYK;
 
 public class CYKgui {
+	
 	private ControllerCYK control;
+	
 	private ArrayList<GrammarTVRow> grammarRows;
 
 	@FXML
@@ -54,8 +56,7 @@ public class CYKgui {
 	@FXML
 	private TableView<CYKRow> tvResults;
 
-
-
+	
 	public CYKgui(ControllerCYK c) {
 		control=c;
 	}
@@ -108,7 +109,7 @@ public class CYKgui {
 			alert.showAndWait();
 		}else {
 			createGrammar();
-			control.cykAlgorithm();
+			String m=control.cykAlgorithm();
 			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/ui/screen3.fxml"));
 			fxmlLoader.setController(this);
 			Parent menuPane = fxmlLoader.load();
@@ -116,7 +117,7 @@ public class CYKgui {
 			mainPane.setCenter(menuPane);
 			mainPane.setStyle("-fx-background-image: url(/ui/background.jpeg)");
 			
-			//FALTA RESULATDO EN LABEL----------------------------------
+			message.setText(m);
 			initializeTableViewCYK();
 		}
 
