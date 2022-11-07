@@ -8,7 +8,7 @@ public class ControllerCYK {
 	ArrayList<String>[][] cykMatrix;
 	String stringW;
 	
-	public ControllerCYK() {
+	public ControllerCYK(String string, int integer) {
 		grammar=new Grammar();
 		
 	}
@@ -25,3 +25,4 @@ public class ControllerCYK {
 		
 	}
 }
+
