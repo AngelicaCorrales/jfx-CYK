@@ -16,7 +16,7 @@ public class Grammar {
 	}
 	
 	public void addToGrammar(String variable, String productions) {
-		ArrayList<String> p= (ArrayList<String>) Arrays.asList( productions.split("|"));
+		ArrayList<String> p= new ArrayList<String> (Arrays.asList( productions.split("\\|")));
 		keys.add(variable);
 		grammarHT.put(variable, p);
 	}
@@ -39,7 +39,7 @@ public class Grammar {
 		for(int i=0;i<keys.size();i++) {
 			prod=grammarHT.get(keys.get(i));
 			for(int j=0;j<prod.size();j++) {
-				if(value.equals(prod.get(i))) {
+				if(value.equals(prod.get(j))) {
 					key+=keys.get(i);
 				}
 			}

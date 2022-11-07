@@ -25,6 +25,13 @@ public class ControllerCYK {
 		return cykRows;
 	}
 
+	public void setGrammarInitilVariable(String var) {
+		grammar.setInitialVariable(var);
+	}
+	public void addToGrammar(String variable, String productions) {
+		grammar.addToGrammar(variable, productions);
+	}
+	
 	public void initializeMatrix() {
 		int sl= stringW.length();
 		cykMatrix= new String[sl][sl];
@@ -34,14 +41,6 @@ public class ControllerCYK {
 			cykMatrix[i][0]=keys;
 		}
 	}
-	
-	public void setGrammarInitilVariable(String var) {
-		grammar.setInitialVariable(var);
-	}
-	public void addToGrammar(String variable, String productions) {
-		grammar.addToGrammar(variable, productions);
-	}
-	
 	
 	public String cykAlgorithm() {
 		
@@ -55,10 +54,10 @@ public class ControllerCYK {
 		
 		
 		//SALIDA
-		if(cykMatrix[1][stringW.length()-1].contains(grammar.getInitialVariable())) {
-			message="la cadena"+stringW+"pertenece a L(G)";
+		if(cykMatrix[0][stringW.length()-1].contains(grammar.getInitialVariable())) {
+			message="la cadena "+stringW+" pertenece a L(G)";
 		}else {
-			message="la cadena"+stringW+"NO pertenece a L(G)";
+			message="la cadena "+stringW+" NO pertenece a L(G)";
 		}
 		
 		return message;
@@ -72,8 +71,8 @@ public class ControllerCYK {
 				cykMatrix[i][j]="";
 				for(int k=0;k<j;k++) {
 					for(int l=0;l<cykMatrix[i][k].length();l++) {
-						for(int m=0;m<cykMatrix[i+k][j-k].length();m++) {
-							aux1=cykMatrix[i][k].charAt(l)+""+cykMatrix[i+k][j-k].charAt(m);
+						for(int m=0;m<cykMatrix[i+k+1][j-k-1].length();m++) {
+							aux1=cykMatrix[i][k].charAt(l)+""+cykMatrix[i+k+1][j-k-1].charAt(m);
 							aux2=grammar.SearchInGrammar(aux1);
 							if(!cykMatrix[i][j].contains(aux2)) {
 								cykMatrix[i][j]+=aux2;
