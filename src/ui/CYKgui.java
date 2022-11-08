@@ -24,20 +24,21 @@ import model.CYKRow;
 import model.ControllerCYK;
 
 public class CYKgui {
-	
-	private ControllerCYK control;
-	
-	private ArrayList<GrammarTVRow> grammarRows;
 
+	private ControllerCYK control;
+	private ArrayList<GrammarTVRow> grammarRows;
+	
 	@FXML
 	private BorderPane mainPane;
-
+	
+	//---Screen 1 -----------
 	@FXML
 	private TextField stringW;
 
 	@FXML
 	private Spinner<Integer> variablesSpinner;
-
+	
+	//---Screen 2 -----------
 	@FXML
     private TableColumn<GrammarTVRow, Character> colArrow;
 
@@ -49,8 +50,9 @@ public class CYKgui {
 
     @FXML
     private TableView<GrammarTVRow> tvGrammar;
-    
-    @FXML
+	
+	//---Screen 3 -----------
+	@FXML
 	private Label message;
 
 	@FXML
@@ -123,13 +125,7 @@ public class CYKgui {
 
     }
     
-    public void initializeRowsTableViewGrammar() {
-    	grammarRows= new ArrayList<GrammarTVRow>();
-		for(int i=0; i<control.getNumVariables();i++) {
-			GrammarTVRow row=new GrammarTVRow();			
-			grammarRows.add(row);		
-		}
-	}
+    
     
     public void initializeTableViewGrammar() {
     	initializeRowsTableViewGrammar();
@@ -141,6 +137,14 @@ public class CYKgui {
     	colArrow.setCellValueFactory(new PropertyValueFactory<GrammarTVRow, Character>("Arrow"));
     	colProductions.setCellValueFactory(new PropertyValueFactory<GrammarTVRow, TextField>("Productions"));
     }
+    
+    public void initializeRowsTableViewGrammar() {
+    	grammarRows= new ArrayList<GrammarTVRow>();
+		for(int i=0; i<control.getNumVariables();i++) {
+			GrammarTVRow row=new GrammarTVRow();			
+			grammarRows.add(row);		
+		}
+	}
     
     public boolean valuesMissingGrammar() {
 		boolean exit=false;
@@ -158,7 +162,10 @@ public class CYKgui {
 		return exit;
 	}
   
-    
+    /*
+     *  createGrammar permite crear la gramatica G en FNC con:
+     *  las variables dadas y sus producciones
+     */
     public void createGrammar() {
     	for(int i=0; i<grammarRows.size();i++) {
     		if (i==0) {
@@ -181,7 +188,7 @@ public class CYKgui {
     	
     	for(int i=0; i<tvResults.getColumns().size();i++) {
 			final int  num=j;
-			tvResults.getColumns().get(i).setCellValueFactory(cellData -> new SimpleObjectProperty((cellData.getValue().getVariables().get(num))));			
+			tvResults.getColumns().get(i).setCellValueFactory(cellData -> new SimpleObjectProperty((cellData.getValue().getXijRow().get(num))));			
 			j++;
 		}
     	

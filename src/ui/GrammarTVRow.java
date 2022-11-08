@@ -8,6 +8,10 @@ public class GrammarTVRow {
 	private char arrow;
 	private TextField productions;
 	
+	/*
+	 * CYKRow es una fila de la tabla para la creacion de la gramatica. Cuenta con:
+	 *la variable, un simbolo de flecha y sus producciones
+	 */
 	public GrammarTVRow(){
 		variable= new TextField();
 		arrow='→';
