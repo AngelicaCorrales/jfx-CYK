@@ -59,7 +59,7 @@ public class ControllerCYKTest {
 	@Test
 	public void test1() {
 		setupScenary1();
-		String message= "la cadena bbab pertenece a L(G)";
+		String message= "La cadena bbab pertenece a L(G)";
 		String output=control.cykAlgorithm();
 		assertEquals(message, output);
 	}
@@ -67,7 +67,7 @@ public class ControllerCYKTest {
 	@Test
 	public void test2() {
 		setupScenary2();
-		String message= "la cadena aab pertenece a L(G)";
+		String message= "La cadena aab pertenece a L(G)";
 		String output=control.cykAlgorithm();
 		assertEquals(message, output);
 	}
@@ -75,7 +75,7 @@ public class ControllerCYKTest {
 	@Test
 	public void test3() {
 		setupScenary3();
-		String message= "la cadena bca pertenece a L(G)";
+		String message= "La cadena bca pertenece a L(G)";
 		String output=control.cykAlgorithm();
 		assertEquals(message, output);
 	}
@@ -83,7 +83,7 @@ public class ControllerCYKTest {
 	@Test
 	public void test4() {
 		setupScenary4();
-		String message= "la cadena aabb NO pertenece a L(G)";
+		String message= "La cadena aabb NO pertenece a L(G)";
 		String output=control.cykAlgorithm();
 		assertEquals(message, output);
 	}
@@ -91,7 +91,7 @@ public class ControllerCYKTest {
 	@Test
 	public void test5() {
 		setupScenary5();
-		String message= "la cadena aaaa NO pertenece a L(G)";
+		String message= "La cadena aaaa NO pertenece a L(G)";
 		String output=control.cykAlgorithm();
 		assertEquals(message, output);
 	}

@@ -6,27 +6,30 @@ import java.util.Arrays;
 
 public class CYKRow {
 
-	ArrayList<String> variables;
+	private ArrayList<String> XijRow;
 	
+	/*
+	 * CYKRow es una fila de la tabla resultante al aplicar el algoritmo CYK con la cadena y gramatica dada
+	 */
 	public CYKRow(String[] row) {
-		variables= new ArrayList<String> (Arrays.asList(row));
-		for(int i=0;i<variables.size();i++) {
-			if(variables.get(i)!=null && !variables.get(i).equals("{ }")) {
+		XijRow= new ArrayList<String> (Arrays.asList(row));
+		for(int i=0;i<XijRow.size();i++) {
+			if(XijRow.get(i)!=null && !XijRow.get(i).equals("{ }")) {
 				String var="";
-				for(int k=0;k<variables.get(i).length();k++) {
-					if(k!=variables.get(i).length()-1) {
-						var+=variables.get(i).charAt(k)+",";
+				for(int k=0;k<XijRow.get(i).length();k++) {
+					if(k!=XijRow.get(i).length()-1) {
+						var+=XijRow.get(i).charAt(k)+",";
 					}else {
-						var+=variables.get(i).charAt(k);
+						var+=XijRow.get(i).charAt(k);
 					}
 				}
-				variables.set(i, "{"+var+"}");
+				XijRow.set(i, "{"+var+"}");
 			}
 		}
 	}
 
-	public ArrayList<String> getVariables() {
-		return variables;
+	public ArrayList<String> getXijRow() {
+		return XijRow;
 	}
 
 }

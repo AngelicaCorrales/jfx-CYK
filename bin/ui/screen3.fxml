@@ -20,7 +20,7 @@
       </TableView>
    </center>
    <top>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="250.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
             <Label text="Algoritmo CYK" textFill="WHITE">
                <font>
@@ -30,14 +30,17 @@
                   <Insets bottom="30.0" />
                </VBox.margin>
             </Label>
-            <Label fx:id="message" text="-" textFill="WHITE">
+            <Label fx:id="message" style="-fx-background-color: #474071;" text="-" textFill="#ffdfdf">
                <font>
                   <Font name="Rockwell Bold" size="25.0" />
                </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
             </Label>
-            <Label text="Matriz encontrada a partir de la cadena ingresada" textFill="WHITE">
+            <Label text="Matriz resultante de la cadena ingresada" textFill="WHITE">
                <font>
-                  <Font name="Rockwell Bold" size="25.0" />
+                  <Font name="Rockwell Bold" size="22.0" />
                </font>
                <VBox.margin>
                   <Insets bottom="-30.0" />
@@ -47,9 +50,9 @@
       </VBox>
    </top>
    <bottom>
-      <VBox alignment="CENTER" prefHeight="163.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="150.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
          <children>
-            <Button alignment="CENTER" mnemonicParsing="false" onAction="#startAgain" style="-fx-background-color: #25b636; -fx-border-color: #1b8327; -fx-border-width: 3;" text="Volver al inicio" textFill="WHITE">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#startAgain" style="-fx-background-color: #900C3F; -fx-border-color: #4A031E; -fx-border-width: 3;" text="Volver al inicio" textFill="WHITE">
                <font>
                   <Font name="Rockwell" size="25.0" />
                </font>
