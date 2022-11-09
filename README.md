@@ -24,7 +24,7 @@ Our implementation is based on the following pseudocode of the CYK algorithm:
  1️⃣ You can clone this repository and then compile it in your console,<br>
  2️⃣ You can download a .ZIP file of our project and then unzip this folder to compile it in your console, or <br> 
  3️⃣ You can look for the runnable .jar file, following this steps:<br>
-      * Browse to the directory in which you unzipped the .ZIP file or FiniteStateMachine folder if you cloned our repository.<br> 
+      * Browse to the directory in which you unzipped the .ZIP file or jfx-CYK folder if you cloned our repository.<br> 
       * Browse to the executable folder.<br> 
       * Double clic on CYK-algorithm.jar<br>
     
@@ -34,7 +34,7 @@ Our implementation is based on the following pseudocode of the CYK algorithm:
 * [Scene Builder](https://gluonhq.com/products/scene-builder/) - Design tool used in the construction of the graphical interface.
 
 ## How to use the program? 📌
-You can find an **instructions manual** [here](https://github.com/AngelicaCorrales/FiniteStateMachine/blob/441385d130336a2143eb23338b13025093d262a1/docs/Instructions.pdf)!!
+You can find an **instructions manual** [here](https://github.com/AngelicaCorrales/jfx-CYK/blob/main/docs/Manual%20de%20instrucciones%20del%20programa%20jfx-CYK.pdf)!!
 
 ## Authors ✒️
 * **Angélica Corrales Quevedo** - [AngelicaCorrales](https://github.com/AngelicaCorrales).
